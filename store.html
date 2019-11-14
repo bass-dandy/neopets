@@ -1,0 +1,164 @@
+<style>
+/* global styles */
+body {
+  background-color: white;
+}
+br {
+  line-height: 0;
+}
+table {
+  table-layout: fixed;
+}
+hr {
+  border: 0;
+}
+#main {
+  border: 0;
+}
+
+/* hide everything in the header except for the time, which we hack to bits */
+#ban {
+  height: 0;
+}
+#header, #header .medText, #header .eventIcon {
+  height: 0;
+  font-size: 0;
+}
+#header td {
+  height: 0;
+}
+#header img {
+  width: 0;
+}
+#header table tr + tr table td {
+  width: 0;
+}
+#header tr {
+  height: 0;
+  overflow: hidden;
+}
+#header tr + tr {
+  height: auto;
+}
+#nst {
+  background: url(https://i.imgur.com/uepmbys.png) no-repeat;
+  background-position: center 100px;
+  padding-top: 160px;
+  width: auto !important;
+  font: 12px "Courier New";
+}
+
+/* hide sidebar, depends on tables using fixed layout */
+.sidebar {
+  width: 0;
+  overflow: auto;
+}
+
+.content {
+  padding: 0;
+  font: 10px "Courier New";
+  text-align: center;
+  text-transform: lowercase;
+}
+
+/* nav links */
+.content .medText {
+  padding: 10px 0;
+  font-size: 10px;
+}
+.content .medText a b {
+  font-weight: normal;
+}
+
+/* shop name */
+.content b {
+  text-transform: none;
+}
+/* owner and report links */
+.content a b {
+  color: black;
+  text-transform: lowercase;
+}
+.content a:hover b {
+  color: white;
+  background-color: red;
+}
+
+/* hide shopkeeper */
+.content div img {
+  width: 0;
+  height: 0;
+}
+/* hide shopkeeper greeting */
+.content div img + br + b {
+  font-size: 0;
+}
+
+/* item qty and price */
+.content td {
+  padding: 10px;
+  font: 10px "Courier New";
+  text-transform: lowercase;
+  color: transparent;
+}
+.content td:hover {
+  color: #000;
+}
+
+/* item image */
+.content td img {
+  height: 80px;
+  width: 80px;
+  border: 1px solid transparent;
+}
+.content td:hover img {
+  border-color: #EEE;
+}
+
+/* item name */
+.content td b {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+  white-space: nowrap;
+}
+
+/* searched item container */
+#logo_clear + div table {
+  width: 100%;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #eee;
+}
+/* searched item qty and price */
+#logo_clear + div table td,
+#logo_clear + div table td:hover {
+  color: red;
+}
+
+/* return to shops button */
+.content form {
+  padding: 25px 0;
+}
+.content form input {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: black;
+  font: 10px "Courier New";
+  text-transform: lowercase;
+}
+.content form input:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+
+/* hide footer */
+#footer {
+  height: 0;
+  overflow: hidden;
+}
+</style>
+<div id="logo_clear" style="height: 150px"></div>

@@ -1,0 +1,244 @@
+<style>
+/* global styles */
+td {
+	min-width: 15px;
+}
+a:link, a:visited {
+	color: #1128F0;
+	text-decoration: underline;
+}
+a:hover {
+	color: #010081;
+}
+
+/* hide most of the header */
+#ban {
+	height: 0;
+}
+#header tr, #header tr + tr + tr {
+	display: none;
+}
+
+/* keep the main navigation, make it full width, put it at bottom of screen, make it look ill */
+#header tr + tr, #header #navigation tr {
+	display: table-row;
+}
+#header table {
+	width: 100%;
+	padding: 2px;
+}
+#header {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background: #C0C0C0;
+	border-top: 2px solid #fff;
+	background-image: url("http://i.imgur.com/TKJp7d3.png");
+	background-repeat: no-repeat;
+	background-position: left 4px center;
+	z-index: 10000;
+}
+#template_nav {
+	height: auto;
+	margin: 0 0 0 92px; /* leave room for start button background image */
+}
+/* make the nav dropdowns look and feel like the win95 start button */
+li.nav_image {
+	display: inline-block;
+	padding: 0 2px;
+	z-index: auto;
+}
+.nav_image img {
+	height: 30px;
+	width: auto;
+	border: 2px outset;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #000;
+	border-right-color: #000;
+	vertical-align: middle;
+}
+.nav_image:hover img {
+	border: 2px inset;
+	border-top-color: #000;
+	border-left-color: #000;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+	background: #EAEAEA;
+}
+li ul.dropdown {
+	left: 2px;
+	bottom: 34px;
+	top: auto;
+	background: #C0C0C0;
+	border: 2px outset;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #000;
+	border-right-color: #000;
+	font: 12px monospace;
+}
+li ul.dropdown li a:link, li ul.dropdown li a:visited {
+	text-decoration: none;
+	color: #000;
+}
+li ul.dropdown li a:link:hover, li ul.dropdown li a:visited:hover {
+	background: #010081;
+	color: #fff;
+}
+#nst {
+	width: 1px;
+	white-space: nowrap;
+	text-align: right;
+	padding-right: 5px;
+	border: 2px inset;
+	border-top-color: #000;
+	border-left-color: #000;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+	background: #EAEAEA;
+	font-family: monospace;
+}
+
+/* main content junk, mostly just small padding adjustments */
+body, #main {
+	width: 100%;
+	background: #008081;
+}
+#main {
+	border: 0;
+	margin: 0;
+}
+#content {
+	margin: auto;
+	padding: 15px 0 59px; /* bottom padding to clear the new fixed nav */
+}
+.content {
+	padding: 0;
+}
+.content > table {
+	margin-top: 15px !important;
+}
+.content > br {
+	display: none;
+}
+.medText {
+	font: 12px times;
+}
+
+/* this is specifically the second row; we want a 15px gutter between all "windows", which takes extra work here */
+.content > style + table {
+	border-spacing: 15px 0;
+	margin: 0 -15px;
+	width: auto;
+}
+
+/* make each box in the profile look like a danged win95 window, give them all a 15px gutter */
+.contentModule {
+	background: #C0C0C0;
+	border: 2px outset;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #000;
+	border-right-color: #000;
+}
+.contentModuleHeader, .contentModuleHeaderAlt {
+	padding: 3px 5px;
+}
+.contentModuleHeader {
+	background: #010081;
+	color: #fff;
+}
+.contentModuleHeaderAlt {
+	background: #8E8E8D;
+	color: #C0C0C0;
+}
+.contentModuleHeader, .contentModuleHeaderAlt, #layer2 + div {
+	background-image: url("http://i.imgur.com/0yBFhlF.png");
+	background-repeat: no-repeat;
+	background-position: right 5px center;
+	font-family: monospace;
+}
+.contentModuleTable {
+	border: 0;
+	border-spacing: 2px;
+	height: 355px; /* I hate this */
+}
+.contentModuleContent {
+	border: 2px inset;
+	border-top-color: #000;
+	border-left-color: #000;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+}
+.bx-viewport /* the neopet carousel */ {
+	height: auto !important;
+}
+#right_of_trohpies /* not a typo lmao */ {
+	border-spacing: 0;
+	width: 100%;
+}
+#ncmall table + br {
+	display: none;
+}
+
+/* hide footer */
+#footer {
+	height: 0;
+	overflow: hidden;
+}
+
+/* give our bio the win95 treatment, and make the user lookup title look like a window title */
+#layer2 + div {
+	padding: 7px 7px 5px;
+	border: 2px outset;
+	border-bottom: 0;
+	border-left-color: #fff;
+	border-top-color: #fff;
+	border-right-color: #000;
+	background-color: #8E8E8D;
+	background-position: right 7px center;
+	color: #fff;
+	text-align: left;
+}
+#layer2 + div b {
+	font: 9pt monospace;
+	font-weight: bold;
+	color: #C0C0C0;
+}
+.bio {
+	position: relative;
+	padding: 2px;
+	border: 2px outset;
+	border-top: 0;
+	border-left-color: #fff;
+	border-bottom-color: #000;
+	border-right-color: #000;
+	background-color: #C0C0C0;
+	font: 16px times;
+}
+/* this is unfortunate but the only way to get a small grey border in the user lookup title */
+.bio .outline {
+	border: 2px solid #C0C0C0;
+	border-bottom: 0;
+	height: 100%;
+	position: absolute;
+	top: -27px;
+	left: 0;
+	right: 0;
+}
+.bio .contentModuleContent {
+	padding: 20px;
+	width: auto;
+}
+.bio + br {
+	display: none;
+}
+</style>
+<div class="bio">
+	<div class="outline"></div>
+	<div class="contentModuleContent">
+		✨ He's a dandy guy with a bass ✨
+	</div>
+</div>
